@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — pause.</title>
+  <meta name="description" content="pause. terms of service. Free to use. No financial advice. Your money, your decisions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+    :root {
+      --bg:        #F7F5F0;
+      --surface:   #FEFDF9;
+      --warm:      #EFECE5;
+      --ink:       #1E1E1B;
+      --ink-2:     #4A4844;
+      --muted:     #96948E;
+      --rule:      #E2DFD8;
+      --green:     #2A4A35;
+      --green-mid: #3B6E4A;
+      --green-lit: #5A9468;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+    }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 48px;
+      border-bottom: 1px solid var(--rule);
+      background: var(--surface);
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 20px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .nav-back {
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--ink); }
+
+    /* ── MAIN ── */
+    .doc-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 64px 48px 120px;
+    }
+
+    .doc-eyebrow {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--green-lit);
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 5vw, 52px);
+      font-weight: 400;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+
+    .doc-meta {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    /* TOC */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-bottom: 48px;
+    }
+    .toc-title {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .toc ol { padding-left: 18px; }
+    .toc li { margin-bottom: 8px; }
+    .toc a {
+      font-size: 13px;
+      color: var(--green-mid);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .toc a:hover { color: var(--green); }
+
+    /* Sections */
+    .doc-section {
+      margin-bottom: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .doc-section:last-child { border-bottom: none; }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+      scroll-margin-top: 32px;
+    }
+
+    p {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--ink-2);
+      margin-bottom: 16px;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+      margin-bottom: 16px;
+    }
+    li {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--ink-2);
+      margin-bottom: 6px;
+    }
+
+    strong { font-weight: 500; color: var(--ink); }
+
+    a { color: var(--green-mid); text-decoration: none; }
+    a:hover { color: var(--green); }
+
+    /* Highlight box */
+    .doc-highlight {
+      background: var(--warm);
+      border-left: 3px solid var(--green-lit);
+      border-radius: 0 8px 8px 0;
+      padding: 18px 22px;
+      margin: 24px 0;
+    }
+    .doc-highlight p { margin: 0; color: var(--ink-2); }
+
+    /* Footer */
+    footer {
+      padding: 40px 48px;
+      border-top: 1px solid var(--rule);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 18px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .footer-copy { font-size: 12px; color: var(--muted); }
+    .footer-links { display: flex; gap: 24px; list-style: none; }
+    .footer-links a { font-size: 12px; color: var(--muted); text-decoration: none; }
+    .footer-links a:hover { color: var(--ink); }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      .doc-wrap { padding: 40px 24px 80px; }
+      footer { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo"><svg xmlns="http://www.w3.org/2000/svg" width="105.1" height="35.9" viewBox="0 0 105.1 35.9" shape-rendering="geometricPrecision" style="display:block"><g transform="translate(4.73,6.93) scale(0.22)" stroke="#5A9468" fill="none"><rect x="0" y="0" width="17" height="100" rx="2" fill="#5A9468"/><rect x="30" y="0" width="17" height="100" rx="2" fill="#5A9468"/></g><g transform="translate(17.71,6.93) scale(0.22)" stroke="#5A9468" fill="none"><circle cx="41.5" cy="64" r="36" fill="none" stroke-width="11" stroke-linecap="square"/><line x1="77.5" y1="64" x2="77.5" y2="100" stroke-width="11" stroke-linecap="square"/></g><g transform="translate(38.61,6.93) scale(0.22)" stroke="#5A9468" fill="none"><line x1="5.5" y1="28" x2="5.5" y2="64" stroke-width="11" stroke-linecap="square"/><line x1="77.5" y1="28" x2="77.5" y2="64" stroke-width="11" stroke-linecap="square"/><path d="M5.5 64 A36 36 0 0 0 77.5 64" fill="none" stroke-width="11" stroke-linecap="square"/></g><g transform="translate(60.72,6.93) scale(0.22)" stroke="#5A9468" fill="none"><path d="M63.5 46.88 A27.5 27.5 0 1 0 8.5 62.00 Q8.5 64 36 64 Q63.5 64 63.5 66.00 A27.5 27.5 0 1 1 8.5 81.13" fill="none" stroke-width="11" stroke-linecap="square"/><line x1="36" y1="18" x2="36" y2="110" stroke-width="11" stroke-linecap="square"/></g><g transform="translate(79.20,6.93) scale(0.22)" stroke="#5A9468" fill="none"><path d="M81.25 39.91 A36 36 0 1 0 81.25 88.09" fill="none" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><line x1="13.00" y1="54.64" x2="63.50" y2="54.64" stroke-width="11" stroke-linecap="square"/><line x1="13.00" y1="73.36" x2="63.50" y2="73.36" stroke-width="11" stroke-linecap="square"/></g></svg></a>
+    <a href="/" class="nav-back">← Back to home</a>
+  </nav>
+
+  <div class="doc-hero">
+    <div class="doc-eyebrow">Legal</div>
+    <h1 class="doc-title">Terms of<br><em>Service.</em></h1>
+    <div class="doc-meta">Effective date: January 1, 2025 &nbsp;·&nbsp; Last updated: January 1, 2025</div>
+  </div>
+
+  <div class="toc">
+    <div class="toc-label">Contents</div>
+    <ul class="toc-list">
+      <li><a href="#s1"><span class="toc-num">01</span> Acceptance of terms</a></li>
+      <li><a href="#s2"><span class="toc-num">02</span> Description of service</a></li>
+      <li><a href="#s3"><span class="toc-num">03</span> Not financial advice</a></li>
+      <li><a href="#s4"><span class="toc-num">04</span> Acceptable use</a></li>
+      <li><a href="#s5"><span class="toc-num">05</span> Pro plan & billing</a></li>
+      <li><a href="#s6"><span class="toc-num">06</span> Disclaimer of warranties</a></li>
+      <li><a href="#s7"><span class="toc-num">07</span> Limitation of liability</a></li>
+      <li><a href="#s8"><span class="toc-num">08</span> Changes to the service</a></li>
+      <li><a href="#s9"><span class="toc-num">09</span> Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="doc-content">
+
+    <div class="doc-section" id="s1">
+      <div class="section-num">01</div>
+      <h2>Acceptance of terms</h2>
+      <p>By installing the pause. Chrome extension or using the pause.finance website, you agree to these Terms of Service. If you do not agree, please uninstall the extension and discontinue use of the website.</p>
+      <p>These terms apply to all users of pause., including users of the free tier and any future paid (Pro) plan. "pause.", "we", "us", and "our" refers to the operators of pause.finance.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="doc-section" id="s2">
+      <div class="section-num">02</div>
+      <h2>Description of service</h2>
+      <p>pause. is a Chrome browser extension that intercepts Add to Cart and Buy Now click events on supported shopping websites, displays a timed overlay prompting the user to reflect on the purchase, and optionally logs the interaction locally to track spending impulses over time.</p>
+      <p>pause. is a personal productivity tool. It is not a financial product, a banking service, a payment processor, or a savings account. Any figures shown (projected savings, annual impact) are illustrative estimates based on your activity and are not guaranteed outcomes.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="doc-section" id="s3">
+      <div class="section-num">03</div>
+      <h2>Not financial advice</h2>
+      <div class="warning-box">
+        <div class="warning-label">Important</div>
+        <p>pause. is not a financial advisor. Nothing in the extension, on our website, or in any communication from us constitutes financial, investment, tax, or legal advice. All savings projections and spending insights are for informational purposes only.</p>
+      </div>
+      <p>You are solely responsible for your financial decisions. pause. provides a tool to support mindful spending — it does not make recommendations about what you should or should not buy, how you should allocate your money, or what financial goals you should set.</p>
+      <p>If you need financial advice, please consult a qualified financial advisor.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="doc-section" id="s4">
+      <div class="section-num">04</div>
+      <h2>Acceptable use</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Reverse engineer, decompile, or attempt to extract the source code of the extension for malicious purposes</li>
+        <li>Use pause. in any way that violates applicable law or regulation</li>
+        <li>Attempt to circumvent, disable, or interfere with any security features of the service</li>
+        <li>Use the service to interfere with or disrupt any third-party websites or services</li>
+        <li>Misrepresent your identity or affiliation when contacting us</li>
+      </ul>
+      <p>pause. is provided for personal, non-commercial use. Commercial redistribution or resale of the extension is not permitted without written permission.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="doc-section" id="s5">
+      <div class="section-num">05</div>
+      <h2>Pro plan & billing</h2>
+      <p>pause. currently offers a free tier with no payment required. When the Pro plan launches, the following terms will apply:</p>
+      <ul>
+        <li>Pro subscriptions are billed monthly ($4.99/mo) or annually ($39.99/yr)</li>
+        <li>Subscriptions renew automatically until cancelled</li>
+        <li>You may cancel at any time; access continues until the end of the current billing period</li>
+        <li>Refunds are available within 7 days of initial purchase or renewal if requested in good faith</li>
+        <li>We reserve the right to change pricing with 30 days' notice to subscribers</li>
+      </ul>
+      <p>Billing will be handled through Stripe. By subscribing, you also agree to Stripe's terms of service.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="doc-section" id="s6">
+      <div class="section-num">06</div>
+      <h2>Disclaimer of warranties</h2>
+      <p>pause. is provided "as is" and "as available" without warranties of any kind, express or implied. We do not warrant that:</p>
+      <ul>
+        <li>The extension will work on every website or with every browser configuration</li>
+        <li>The service will be uninterrupted, error-free, or fully secure</li>
+        <li>Price or product data extracted from cart payloads will always be accurate</li>
+        <li>The service will be available at any particular time</li>
+      </ul>
+      <p>Some shopping sites may update their checkout flows in ways that temporarily prevent pause. from intercepting cart events. We will work to maintain compatibility but cannot guarantee it.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="doc-section" id="s7">
+      <div class="section-num">07</div>
+      <h2>Limitation of liability</h2>
+      <p>To the maximum extent permitted by law, pause. and its operators shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:</p>
+      <ul>
+        <li>Loss of data or savings data stored locally</li>
+        <li>Missed purchases or transactions due to extension behavior</li>
+        <li>Any financial outcome arising from use of or reliance on pause.</li>
+        <li>Incompatibility with any shopping site or browser update</li>
+      </ul>
+      <p>Our total liability to you for any claim arising from use of pause. shall not exceed the amount you paid to us in the 12 months preceding the claim (or $10 if you are a free user).</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="doc-section" id="s8">
+      <div class="section-num">08</div>
+      <h2>Changes to the service</h2>
+      <p>We reserve the right to modify, suspend, or discontinue any aspect of the service at any time. We will provide reasonable notice of material changes — particularly any that affect paid subscribers.</p>
+      <p>We may update these Terms from time to time. Continued use of pause. after changes are posted constitutes acceptance of the updated terms. We will update the "Last updated" date at the top of this page whenever changes are made.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="doc-section" id="s9">
+      <div class="section-num">09</div>
+      <h2>Contact</h2>
+      <p>Questions about these terms? Email us at <a href="/cdn-cgi/l/email-protection#fd9598919192bd8d9c888e98d39b94939c939e98"><span class="__cf_email__" data-cfemail="076f626b6b6847776672746229616e6966696462">[email&#160;protected]</span></a>. We aim to respond within 2 business days.</p>
+    </div>
+
+  </div>
+
+  <footer>
+    <a href="/" class="footer-logo"><svg xmlns="http://www.w3.org/2000/svg" width="85.9" height="29.3" viewBox="0 0 85.9 29.3" shape-rendering="geometricPrecision" style="display:block"><g transform="translate(3.87,5.67) scale(0.18)" stroke="#5A9468" fill="none"><rect x="0" y="0" width="17" height="100" rx="2" fill="#5A9468"/><rect x="30" y="0" width="17" height="100" rx="2" fill="#5A9468"/></g><g transform="translate(14.49,5.67) scale(0.18)" stroke="#5A9468" fill="none"><circle cx="41.5" cy="64" r="36" fill="none" stroke-width="11" stroke-linecap="square"/><line x1="77.5" y1="64" x2="77.5" y2="100" stroke-width="11" stroke-linecap="square"/></g><g transform="translate(31.59,5.67) scale(0.18)" stroke="#5A9468" fill="none"><line x1="5.5" y1="28" x2="5.5" y2="64" stroke-width="11" stroke-linecap="square"/><line x1="77.5" y1="28" x2="77.5" y2="64" stroke-width="11" stroke-linecap="square"/><path d="M5.5 64 A36 36 0 0 0 77.5 64" fill="none" stroke-width="11" stroke-linecap="square"/></g><g transform="translate(49.68,5.67) scale(0.18)" stroke="#5A9468" fill="none"><path d="M63.5 46.88 A27.5 27.5 0 1 0 8.5 62.00 Q8.5 64 36 64 Q63.5 64 63.5 66.00 A27.5 27.5 0 1 1 8.5 81.13" fill="none" stroke-width="11" stroke-linecap="square"/><line x1="36" y1="18" x2="36" y2="110" stroke-width="11" stroke-linecap="square"/></g><g transform="translate(64.80,5.67) scale(0.18)" stroke="#5A9468" fill="none"><path d="M81.25 39.91 A36 36 0 1 0 81.25 88.09" fill="none" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><line x1="13.00" y1="54.64" x2="63.50" y2="54.64" stroke-width="11" stroke-linecap="square"/><line x1="13.00" y1="73.36" x2="63.50" y2="73.36" stroke-width="11" stroke-linecap="square"/></g></svg></a>
+    <ul class="footer-links">
+      <li><a href="/p

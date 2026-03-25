@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — pause.</title>
+  <meta name="description" content="pause. privacy policy. We store your data locally on your device. Nothing leaves your browser.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+    :root {
+      --bg:        #F7F5F0;
+      --surface:   #FEFDF9;
+      --warm:      #EFECE5;
+      --ink:       #1E1E1B;
+      --ink-2:     #4A4844;
+      --muted:     #96948E;
+      --rule:      #E2DFD8;
+      --green:     #2A4A35;
+      --green-mid: #3B6E4A;
+      --green-lit: #5A9468;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+    }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 48px;
+      border-bottom: 1px solid var(--rule);
+      background: var(--surface);
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 20px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .nav-back {
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--ink); }
+
+    /* ── MAIN ── */
+    .doc-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 64px 48px 120px;
+    }
+
+    .doc-eyebrow {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--green-lit);
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 5vw, 52px);
+      font-weight: 400;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+
+    .doc-meta {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    /* TOC */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-bottom: 48px;
+    }
+    .toc-title {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .toc ol { padding-left: 18px; }
+    .toc li { margin-bottom: 8px; }
+    .toc a {
+      font-size: 13px;
+      color: var(--green-mid);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .toc a:hover { color: var(--green); }
+
+    /* Sections */
+    .doc-section {
+      margin-bottom: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .doc-section:last-child { border-bottom: none; }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+      scroll-margin-top: 32px;
+    }
+
+    p {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--ink-2);
+      margin-bottom: 16px;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+      margin-bottom: 16px;
+    }
+    li {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--ink-2);
+      margin-bottom: 6px;
+    }
+
+    strong { font-weight: 500; color: var(--ink); }
+
+    a { color: var(--green-mid); text-decoration: none; }
+    a:hover { color: var(--green); }
+
+    /* Highlight box */
+    .doc-highlight {
+      background: var(--warm);
+      border-left: 3px solid var(--green-lit);
+      border-radius: 0 8px 8px 0;
+      padding: 18px 22px;
+      margin: 24px 0;
+    }
+    .doc-highlight p { margin: 0; color: var(--ink-2); }
+
+    /* Footer */
+    footer {
+      padding: 40px 48px;
+      border-top: 1px solid var(--rule);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 18px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .footer-copy { font-size: 12px; color: var(--muted); }
+    .footer-links { display: flex; gap: 24px; list-style: none; }
+    .footer-links a { font-size: 12px; color: var(--muted); text-decoration: none; }
+    .footer-links a:hover { color: var(--ink); }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      .doc-wrap { padding: 40px 24px 80px; }
+      footer { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo"><svg xmlns="http://www.w3.org/2000/svg" width="105.1" height="35.9" viewBox="0 0 105.1 35.9" shape-rendering="geometricPrecision" style="display:block"><g transform="translate(4.73,6.93) scale(0.22)" stroke="#5A9468" fill="none"><rect x="0" y="0" width="17" height="100" rx="2" fill="#5A9468"/><rect x="30" y="0" width="17" height="100" rx="2" fill="#5A9468"/></g><g transform="translate(17.71,6.93) scale(0.22)" stroke="#5A9468" fill="none"><circle cx="41.5" cy="64" r="36" fill="none" stroke-width="11" stroke-linecap="square"/><line x1="77.5" y1="64" x2="77.5" y2="100" stroke-width="11" stroke-linecap="square"/></g><g transform="translate(38.61,6.93) scale(0.22)" stroke="#5A9468" fill="none"><line x1="5.5" y1="28" x2="5.5" y2="64" stroke-width="11" stroke-linecap="square"/><line x1="77.5" y1="28" x2="77.5" y2="64" stroke-width="11" stroke-linecap="square"/><path d="M5.5 64 A36 36 0 0 0 77.5 64" fill="none" stroke-width="11" stroke-linecap="square"/></g><g transform="translate(60.72,6.93) scale(0.22)" stroke="#5A9468" fill="none"><path d="M63.5 46.88 A27.5 27.5 0 1 0 8.5 62.00 Q8.5 64 36 64 Q63.5 64 63.5 66.00 A27.5 27.5 0 1 1 8.5 81.13" fill="none" stroke-width="11" stroke-linecap="square"/><line x1="36" y1="18" x2="36" y2="110" stroke-width="11" stroke-linecap="square"/></g><g transform="translate(79.20,6.93) scale(0.22)" stroke="#5A9468" fill="none"><path d="M81.25 39.91 A36 36 0 1 0 81.25 88.09" fill="none" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><line x1="13.00" y1="54.64" x2="63.50" y2="54.64" stroke-width="11" stroke-linecap="square"/><line x1="13.00" y1="73.36" x2="63.50" y2="73.36" stroke-width="11" stroke-linecap="square"/></g></svg></a>
+    <a href="/" class="nav-back">← Back to home</a>
+  </nav>
+
+  <div class="doc-hero">
+    <div class="doc-eyebrow">Legal</div>
+    <h1 class="doc-title">Privacy<br><em>Policy.</em></h1>
+    <div class="doc-meta">Effective date: January 1, 2025 &nbsp;·&nbsp; Last updated: January 1, 2025</div>
+  </div>
+
+  <div class="summary-cards">
+    <div class="summary-card">
+      <div class="card-icon">🔒</div>
+      <div class="card-title">Stays on your device</div>
+      <div class="card-body">All pause data is stored locally in Chrome storage. Nothing is sent to any server.</div>
+    </div>
+    <div class="summary-card">
+      <div class="card-icon">🚫</div>
+      <div class="card-title">No tracking</div>
+      <div class="card-body">We do not track your browsing, collect personal information, or build any profile on you.</div>
+    </div>
+    <div class="summary-card">
+      <div class="card-icon">💸</div>
+      <div class="card-title">Never sold</div>
+      <div class="card-body">Your data is never sold, shared, or monetised. We make money from Pro subscriptions only.</div>
+    </div>
+  </div>
+
+  <div class="doc-content">
+
+    <div class="doc-section">
+      <div class="section-num">01</div>
+      <h2>What pause. collects</h2>
+      <div class="highlight-box">
+        <p><strong>Short version:</strong> pause. stores your pause history and savings goals locally on your device using Chrome's built-in storage API. This data never leaves your browser unless you explicitly choose to sync it (Pro feature, coming soon).</p>
+      </div>
+      <p>When you use pause., the following data is stored locally on your device via <code>chrome.storage.local</code>:</p>
+      <ul>
+        <li>The amount of each intercepted purchase (pulled from the cart payload or estimated from the page)</li>
+        <li>A product name or description for each intercepted item</li>
+        <li>The date and time of each pause event</li>
+        <li>Whether you chose to save or proceed with each purchase</li>
+        <li>Your savings goals and progress toward them</li>
+        <li>Your extension settings (e.g. whether pause. is enabled)</li>
+      </ul>
+      <p>This data is stored only on your device. pause. does not have a server that receives or stores this information. We cannot see it, access it, or use it in any way.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="doc-section">
+      <div class="section-num">02</div>
+      <h2>What pause. does not collect</h2>
+      <p>We want to be explicit about what we do not do:</p>
+      <ul>
+        <li>We do not collect your name, email address, or any personal identifiers (unless you voluntarily provide your email on our website)</li>
+        <li>We do not track which websites you visit</li>
+        <li>We do not read the contents of pages you browse</li>
+        <li>We do not collect your payment information — ever</li>
+        <li>We do not use advertising trackers or third-party analytics inside the extension</li>
+        <li>We do not sell, rent, or share any data with any third party</li>
+        <li>We do not build behavioural profiles</li>
+      </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="doc-section">
+      <div class="section-num">03</div>
+      <h2>How the cart intercept works</h2>
+      <p>pause. intercepts Add to Cart and Buy Now network requests to extract the price and product name of the item you are about to purchase. This is done entirely within your browser — the intercepted data is used only to display on the pause overlay and is then stored locally as part of your pause history.</p>
+      <p>pause. does not transmit this data anywhere. The network request to the retailer's server is held temporarily while you decide, then either released (if you choose to buy) or discarded (if you choose to save).</p>
+      <p>pause. does not modify, interfere with, or log the content of any network request other than cart add events on supported shopping sites.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="doc-section">
+      <div class="section-num">04</div>
+      <h2>Website analytics</h2>
+      <p>Our marketing website (pause.finance) uses Google Analytics 4 to understand aggregate traffic — how many people visit, which pages they view, and where they come from. This data is anonymised and aggregated. We do not use it to identify individual users.</p>
+      <p>If you sign up for our email list, we store your email address with Mailchimp to send product updates. You can unsubscribe at any time via the link in any email we send.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="doc-section">
+      <div class="section-num">05</div>
+      <h2>Pro plan & bank sync (future)</h2>
+      <p>When we launch the Pro plan with bank sync (via Plaid), we will update this policy before that feature ships. Bank sync will be entirely opt-in. If you connect a bank account, the connection is handled by Plaid under their own privacy policy. pause. will store only aggregated transaction summaries — not raw bank data — on our servers, encrypted at rest.</p>
+      <p>We will notify all users and update this page before any server-side data storage begins.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="doc-section">
+      <div class="section-num">06</div>
+      <h2>Your rights & data deletion</h2>
+      <p>Because your data is stored locally on your device, you are already in full control of it. You can delete all pause. data at any time by:</p>
+      <ul>
+        <li>Opening Chrome and going to <code>chrome://extensions</code></li>
+        <li>Finding pause. and clicking "Remove"</li>
+        <li>This will permanently delete all locally stored pause data</li>
+      </ul>
+      <p>If you have provided your email address on our website, you can request deletion by emailing <a href="/cdn-cgi/l/email-protection#87efe2ebebe8c7f7e6f2f4e2a9e1eee9e6e9e4e2"><span class="__cf_email__" data-cfemail="056d6069696a4575647076602b636c6b646b6660">[email&#160;protected]</span></a>. We will remove your email from our list within 5 business days.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="doc-section">
+      <div class="section-num">07</div>
+      <h2>Changes to this policy</h2>
+      <p>If we make material changes to this policy — particularly around any new data collection — we will notify users via the extension itself and update the "Last updated" date at the top of this page. We will never begin collecting new categories of data without notice.</p>
+      <p>Questions? Email us at <a href="/cdn-cgi/l/email-protection#a5cdc0c9c9cae5d5c4d0d6c08bc3cccbc4cbc6c0"><span class="__cf_email__" data-cfemail="264e434a4a4966564753554308404f4847484543">[email&#160;protected]</span></a>.<
