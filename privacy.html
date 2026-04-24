@@ -197,11 +197,12 @@
       footer { padding: 32px 24px; }
     }
   </style>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
   <nav>
-    <a href="/" class="nav-logo"><svg xmlns="http://www.w3.org/2000/svg" width="105.1" height="35.9" viewBox="0 0 105.1 35.9" shape-rendering="geometricPrecision" style="display:block"><g transform="translate(4.73,6.93) scale(0.22)" stroke="#5A9468" fill="none"><rect x="0" y="0" width="17" height="100" rx="2" fill="#5A9468"/><rect x="30" y="0" width="17" height="100" rx="2" fill="#5A9468"/></g><g transform="translate(17.71,6.93) scale(0.22)" stroke="#5A9468" fill="none"><circle cx="41.5" cy="64" r="36" fill="none" stroke-width="11" stroke-linecap="square"/><line x1="77.5" y1="64" x2="77.5" y2="100" stroke-width="11" stroke-linecap="square"/></g><g transform="translate(38.61,6.93) scale(0.22)" stroke="#5A9468" fill="none"><line x1="5.5" y1="28" x2="5.5" y2="64" stroke-width="11" stroke-linecap="square"/><line x1="77.5" y1="28" x2="77.5" y2="64" stroke-width="11" stroke-linecap="square"/><path d="M5.5 64 A36 36 0 0 0 77.5 64" fill="none" stroke-width="11" stroke-linecap="square"/></g><g transform="translate(60.72,6.93) scale(0.22)" stroke="#5A9468" fill="none"><path d="M63.5 46.88 A27.5 27.5 0 1 0 8.5 62.00 Q8.5 64 36 64 Q63.5 64 63.5 66.00 A27.5 27.5 0 1 1 8.5 81.13" fill="none" stroke-width="11" stroke-linecap="square"/><line x1="36" y1="18" x2="36" y2="110" stroke-width="11" stroke-linecap="square"/></g><g transform="translate(79.20,6.93) scale(0.22)" stroke="#5A9468" fill="none"><path d="M81.25 39.91 A36 36 0 1 0 81.25 88.09" fill="none" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><line x1="13.00" y1="54.64" x2="63.50" y2="54.64" stroke-width="11" stroke-linecap="square"/><line x1="13.00" y1="73.36" x2="63.50" y2="73.36" stroke-width="11" stroke-linecap="square"/></g></svg></a>
+    <a href="/" class="nav-logo"><span id="nav-logo-svg"></span></a>
     <a href="/" class="nav-back">← Back to home</a>
   </nav>
 
@@ -315,3 +316,87 @@
       <h2>Changes to this policy</h2>
       <p>If we make material changes to this policy — particularly around any new data collection — we will notify users via the extension itself and update the "Last updated" date at the top of this page. We will never begin collecting new categories of data without notice.</p>
       <p>Questions? Email us at <a href="/cdn-cgi/l/email-protection#a5cdc0c9c9cae5d5c4d0d6c08bc3cccbc4cbc6c0"><span class="__cf_email__" data-cfemail="264e434a4a4966564753554308404f4847484543">[email&#160;protected]</span></a>.<
+      })
+    }
+  </script>
+
+
+
+<script>
+function measureOutfitMetrics(f) {
+  var c = document.createElement('canvas');
+  c.width = f * 3; c.height = f * 3;
+  var x = c.getContext('2d');
+  x.font = '300 ' + f + 'px Outfit, sans-serif';
+  x.fillStyle = '#000';
+  x.textBaseline = 'alphabetic';
+  x.fillText('o', f * 0.5, f * 2);
+  var img = x.getImageData(0, 0, c.width, c.height);
+  var top = -1, bot = -1, sw = 0;
+  for (var r = 0; r < c.height; r++) {
+    for (var k = 0; k < c.width; k++) {
+      if (img.data[(r * c.width + k) * 4 + 3] > 64) {
+        if (top < 0) top = r;
+        bot = r; break;
+      }
+    }
+  }
+  var mid = Math.round((top + bot) / 2), inK = false, st = -1;
+  for (var k2 = 0; k2 < c.width; k2++) {
+    var a = img.data[(mid * c.width + k2) * 4 + 3];
+    if (a > 64 && !inK) { inK = true; st = k2; }
+    if (a <= 64 && inK) { sw = k2 - st; break; }
+  }
+  return { height: bot - top, strokePx: sw };
+}
+function buildPauseLogo(sz, col) {
+  col = col || '#2A4A35';
+  var fam = 'Outfit, sans-serif', w = 300;
+  var m = measureOutfitMetrics(sz);
+  var xH = m.height, r = xH / 2, sw = m.strokePx * 0.55;
+  var sH = xH, bW = sH * 0.20, bG = sH * 0.18;
+  var cv = document.createElement('canvas'), cx = cv.getContext('2d');
+  cx.font = w + ' ' + sz + 'px ' + fam;
+  var PW = cx.measureText('P').width, sW = cx.measureText('se').width;
+  var vH = sz * 1.3, bY = vH * 0.80;
+  var aCY = bY - r, aCX = r + sw / 2, aW = aCX + r + sw / 2;
+  var sT = bY - sH, pad = sz * 0.06;
+  var xP = pad, xA = xP + PW + sz * 0.025;
+  var xS = xA + aW + sz * 0.07;
+  var xSe = xS + (bW * 2 + bG) + sz * 0.07;
+  var tW = xSe + sW + pad;
+  var ax = xA + aCX, stx = xA + aCX + r;
+  var svg = '<svg xmlns="http://www.w3.org/2000/svg"';
+  svg += ' width="' + tW.toFixed(1) + '" height="' + vH.toFixed(1) + '"';
+  svg += ' viewBox="0 0 ' + tW.toFixed(1) + ' ' + vH.toFixed(1) + '"';
+  svg += ' shape-rendering="geometricPrecision" style="display:block">';
+  svg += '<text x="' + xP.toFixed(2) + '" y="' + bY.toFixed(2) + '"';
+  svg += ' font-family="' + fam + '" font-size="' + sz + '"';
+  svg += ' font-weight="' + w + '" fill="' + col + '">P</text>';
+  svg += '<circle cx="' + ax.toFixed(2) + '" cy="' + aCY.toFixed(2) + '"';
+  svg += ' r="' + r.toFixed(2) + '" fill="none"';
+  svg += ' stroke="' + col + '" stroke-width="' + sw.toFixed(2) + '"/>';
+  svg += '<line x1="' + stx.toFixed(2) + '" y1="' + aCY.toFixed(2) + '"';
+  svg += ' x2="' + stx.toFixed(2) + '" y2="' + bY.toFixed(2) + '"';
+  svg += ' stroke="' + col + '" stroke-width="' + sw.toFixed(2) + '" stroke-linecap="square"/>';
+  svg += '<rect x="' + xS.toFixed(2) + '" y="' + sT.toFixed(2) + '"';
+  svg += ' width="' + bW.toFixed(2) + '" height="' + sH.toFixed(2) + '"';
+  svg += ' rx="' + (bW * 0.15).toFixed(2) + '" fill="' + col + '"/>';
+  svg += '<rect x="' + (xS + bW + bG).toFixed(2) + '" y="' + sT.toFixed(2) + '"';
+  svg += ' width="' + bW.toFixed(2) + '" height="' + sH.toFixed(2) + '"';
+  svg += ' rx="' + (bW * 0.15).toFixed(2) + '" fill="' + col + '"/>';
+  svg += '<text x="' + xSe.toFixed(2) + '" y="' + bY.toFixed(2) + '"';
+  svg += ' font-family="' + fam + '" font-size="' + sz + '"';
+  svg += ' font-weight="' + w + '" fill="' + col + '">se</text>';
+  svg += '</svg>';
+  return svg;
+}
+</script>
+<script>
+document.fonts.load("300 22px Outfit").then(function() {
+  var n = document.getElementById("nav-logo-svg"); if (n) n.innerHTML = buildPauseLogo(22, "#2A4A35");
+  var ft = document.getElementById("footer-logo-svg"); if (ft) ft.innerHTML = buildPauseLogo(18, "#2A4A35");
+});
+</script>
+</body>
+</html>
